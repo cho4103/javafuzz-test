@@ -3,14 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>javafuzz</groupId>
-  <artifactId>test_project_1</artifactId>
+  <artifactId>test_project</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>test_project_1</name>
+  <name>test_project</name>
   <url>http://maven.apache.org</url>
 
-   <properties>
+  <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>6</maven.compiler.source>
    	<maven.compiler.target>1.6</maven.compiler.target>
@@ -23,13 +23,15 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-     <dependency>
+    <dependency>
       <groupId>dev.fuzzit.javafuzz</groupId>
       <artifactId>core</artifactId>
       <version>1.23-SNAPSHOT</version>
-      <scope>test</scope>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/core-1.23-SNAPSHOT.jar</systemPath>
     </dependency>
   </dependencies>
+  
   
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

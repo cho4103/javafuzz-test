@@ -1,4 +1,4 @@
-package javafuzz.test_project_1;
+package javafuzz.test_project;
 
 /**
  * Hello world!
