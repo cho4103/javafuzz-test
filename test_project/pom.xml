@@ -86,7 +86,6 @@
           <groupId>dev.fuzzit.javafuzz</groupId>
           <artifactId>javafuzz-maven-plugin</artifactId>
           <version>1.23-SNAPSHOT</version>
-          <systemPath>${basedir}/lib/javafuzz-maven-plugin-1.23-SNAPSHOT.jar</systemPath>
         </plugin>
       </plugins>
     </pluginManagement>
