@@ -27,8 +27,7 @@
       <groupId>dev.fuzzit.javafuzz</groupId>
       <artifactId>core</artifactId>
       <version>1.23-SNAPSHOT</version>
-      <scope>system</scope>
-      <systemPath>${basedir}/lib/core-1.23-SNAPSHOT.jar</systemPath>
+      <scope>test</scope>
     </dependency>
   </dependencies>
   
