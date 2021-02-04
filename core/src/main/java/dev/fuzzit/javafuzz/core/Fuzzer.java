@@ -34,9 +34,8 @@ public class Fuzzer {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         md.update(buf);
         byte[] digest = md.digest();
-//      String hex = String.format("%064x", new BigInteger(1, digest));
-//      String filepath = "crash-" + hex;
-        String filepath = "crash";
+        String hex = String.format("%064x", new BigInteger(1, digest));
+        String filepath = "crash-" + hex;
         try (FileOutputStream fos = new FileOutputStream(filepath)) {
             fos.write(buf);
             System.out.printf("crash was written to %s\n", filepath);
@@ -74,9 +73,10 @@ public class Fuzzer {
             try {
                 this.target.fuzz(buf);
             } catch (Exception e) {
-                StringWriter errors = new StringWriter();
+            	StringWriter errors = new StringWriter();
                 e.printStackTrace(new PrintWriter(errors));
-               
+                 
+                e.printStackTrace();
                 this.writeCrash(errors.toString().getBytes());
                 break;
             }
