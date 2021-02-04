@@ -1,6 +1,0 @@
-.idea
-target
-release.properties
-crash-*
-jacoco.exec
-*.classpath
